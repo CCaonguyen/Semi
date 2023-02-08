@@ -17,7 +17,7 @@
     <div class="main">
 
         <section class="signup">
-            <img src="img/1.jpg" alt=""> 
+            <img src="" alt=""> 
             <div class="container">
                 <div class="signup-content">
                     <form method="POST" id="signup-form" class="signup-form">
