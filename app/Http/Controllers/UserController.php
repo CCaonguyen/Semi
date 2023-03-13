@@ -5,126 +5,98 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
-use App\Models\User;
 use App\Models\Useradmin;
 use App\Models\audio;
 use Illuminate\Support\Facades\Auth;
 
+use App\User;
 
 class UserController extends Controller
 {
+
  
-  public function shoping()
-  {
-    return view('shoping');
-
-  }
-  public function view()
-  {
-    return view('view');
-
-  }
   
-  public function news()
-  {
-    return view('news');
-
-  }
-  public function update()
-  {
-    return view('update');
-
-  }
-  public function login()
-  {
-    return view('login');
-
-  }
-  public function payment()
-  {
-    return view('payment');
-
-  }
-  public function index()
-  {
-    return view('index');
-
-  }
-  public function admin123()
-  {
-    return view('admin123');
-
-  }
   
-  public function admin()
-  {
-    return view('admin');
-
-  }
-  public function order()
-  {
-    return view('order');
-
-  }
   public function showlogin()
   {
     return view('login');
     
   }
-  public function  inputuser()
+  public function attendance()
   {
-    return view('  input-user');
+    return view('attendance');
     
   }
-  public function  home()
+  public function class_2()
   {
-    return view(' home');
+    return view('class_2');
     
   }
-  public function  studnet_list()
+  public function class()
   {
-    return view(' student_list');
+    return view('class');
     
   }
-  public function master()
+  public function course_2()
   {
-    return view('master');
+    return view('course_2');
     
   }
-  public function calculator()
+  public function course()
   {
-    return view('calculator');
+    return view('course');
     
   }
-  public function app()
+  public function homepage()
   {
-    return view('app');
+    return view('homepage');
     
   }
+  public function manage_attendance_2()
+  {
+    return view('manage_attendance_2');
+    
+  }
+  public function manage_attendance()
+  {
+    return view('manage_attendance');
+    
+  }
+  public function schedule()
+  {
+    return view('schedule');
+    
+  }
+  
+  
   public function attempt(Request $request)
   {
     dd($request->all());
   }
-  // public function login(Request $request)
-  // {
-  //   if(Auth::attempt(['email'=>$request->email,'password'=>$request->password]))
-  //   {
-  //    if( Auth::user()->role != 0){
-  //       return redirect()->route('admin');
+  public function login(Request $request)
+  {
+    if(Auth::attempt(['email'=>$request->email,'password'=>$request->password]))
+    {
+     if( Auth::user()->role != 0){
+        return redirect()->route('admin');
 
-  //    }else
-  //    {
+     }else
+     {
 
-  //     return redirect()->route('home');
-  //    }
-  //   }
-  //  else
-  //   {
-  //   return redirect()->route('login')->with('message','Invalid username or password!');
-  //   }
-  // }
+      return redirect()->route('home');
+     }
+    }
+   else
+    {
+    return redirect()->route('login')->with('message','Invalid username or password!');
+    }
+  }
 
- 
+  public function home()
+  {
+    return view('home');
+    
+  }
 
   public function logout(){
         Auth::logout();

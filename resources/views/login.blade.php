@@ -2,58 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign Up Form by Colorlib</title>
+    <title>BTEC | FPT Polytechnic</title>
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
-    <!-- Font Icon -->
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
-
-    <!-- Main css -->
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <div class="main">
-
-        <section class="signup">
-            
-            <div class="container">
-                <div class="signup-content">
-                    <form method="POST" id="signup-form" class="signup-form">
-                        <h2 class="form-title">Login account</h2>
-                        <div class="form-group">
-                            <input type="text" class="form-input" name="name" id="name" placeholder="ID Student"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-input" name="email" id="email" placeholder=" Email"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-input" name="password" id="password" placeholder="Password"/>
-                            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-input" name="re_password" id="re_password" placeholder="Repeat your password"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up"/>
-                        </div>
-                    </form>
-                    <p class="loginhere">
-                        Have already an account ? <a href="#" class="loginhere-link">Login here</a>
-                    </p>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-1">
+                    <img src="Images/BTEC.webp" alt="logo" class="logo">
+                </div>
+                <div class="col-11">
+                    <a href="#">CÁN BỘ ĐÀO TẠO</a>
+                    <a href="#">GIẢNG VIÊN</a>
+                    <a href="#">PHỤ HUYNH</a>
+                    <a href="#">SINH VIÊN</a>
                 </div>
             </div>
-        </section>
-
+        </div>
+    </header>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="login">
+                        <img src="Images/footer.png" alt="">
+                        <form action="">
+                            <select name="campus" id="campus" class="form-select" placeholder="Chọn Cơ Sở Đào Tạo">
+                                <option value="Hà Nội" selected>Chọn Cơ Sở Đào Tạo</option>
+                                <option value="Hà Nội" >Hà Nội</option>
+                                <option value="Đà Nẵng" disabled>Đà Nẵng</option>
+                                <option value="Hồ Chí Minh" disabled>Hồ Chí Minh</option>
+                                <option value="Cần Thơ" disabled>Cần Thơ</option>
+                            </select>
+                        </form>
+                        <button class="btn btn-danger" style="width: 40%;"><i class="fa-brands fa-google"></i> Google</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3">
+                    <div class="logo">
+                        <img src="Images/lgd.png" alt="">
+                    </div>
+                </div>
+                <div class="col-9">
+                    <h4>THÔNG TIN LIÊN HỆ</h4>
+                    <p>Trụ sở chính Tòa nhà FPT Polytechnic, Phố Trịnh Văn Bô, Nam Từ Liêm, Hà Nội</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-4">
+                    <div class="group-text">
+                        <a href="#">Cơ Sở Hà Nội</a>
+                        <p>Tòa nhà BTEC, Phố Trịnh Văn Bô, Nam Từ Liêm, Hà Nội</p>
+                        <p>098 109 0513</p>
+                    </div>
+                    <div class="group-text">
+                        <a href="#">Cơ Sở Đà Nẵng</a>
+                        <p>66 Võ Văn Tần, Quận Thanh Khê, Đà Nẵng</p>
+                        <p>032 757 5727</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="group-text">
+                        <a href="#">Cơ Sở Hồ Chí Minh</a>
+                        <p> 205 Nguyễn Xí, Quận Bình Thạnh, Hồ Chí Minh</p>
+                        <p>035 385 2138</p>
+                    </div>
+                    <div class="group-text">
+                        <a href="#">Cơ Sở Cần Thơ</a>
+                        <p>Số 41, Cách Mạng Tháng 8, Phường An Hòa, Quận Ninh Kiều, TP. Cần Thơ</p>
+                        <p>096 705 7605</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <!-- JS -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
 </html>
